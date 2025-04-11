@@ -9,10 +9,12 @@ public class sandwhichshop1 {
         Scanner waiter = new Scanner(System.in);
         float regularSize = 5.45f;
         float largeSize = 8.95f;
+        float regLoaded = 6.45f;
+        float larLoaded = 10.70f;
 
         System.out.println("Welcome Big T's Sandwich Shoppe");
 
-        System.out.print("Please choose a sandwich size (Enter 1 for Regular, 2 for Large): ");
+        System.out.print("Please choose a sandwich size (Enter 1 for Regular, 2 for Large, 3 for Loaded Regular, 4 for Loaded Large): ");
 
         int option = waiter.nextInt();
 
@@ -26,9 +28,15 @@ public class sandwhichshop1 {
             base = regularSize;
         } else if (option == 2) {
             base = largeSize;
+        } else if (option == 3) {
+            base = regLoaded;
+        } else if (option == 4) {
+            base = larLoaded;
         } else {
-            System.out.println("Please choose a correct option, 1 or 2; Please restart the app;");
+            System.out.println("Please choose a correct option, 1 - 4; Please restart the app;");
         }
+
+
 
         double discount = 0.0;
 
@@ -38,7 +46,12 @@ public class sandwhichshop1 {
             discount = 0.20;
         }
 
+
+
         System.out.printf("Your total is: $%.2f", base * (1-discount));
+
+
+
 
     }
 }
